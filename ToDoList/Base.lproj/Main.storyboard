@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7rx-zZ-vZC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7rx-zZ-vZC">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="1037" y="324"/>
         </scene>
-        <!--Table View Controller-->
+        <!--To-Do List-->
         <scene sceneID="R1j-D5-OKj">
             <objects>
                 <tableViewController id="XsC-V8-3ei" sceneMemberID="viewController">
@@ -413,7 +413,13 @@
                             <outlet property="delegate" destination="XsC-V8-3ei" id="xE9-8t-lNs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zET-K3-Tnq"/>
+                    <navigationItem key="navigationItem" title="To-Do List" id="zET-K3-Tnq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jfT-So-8wP">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="cbN-hO-aIk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oz8-Wb-ez0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
