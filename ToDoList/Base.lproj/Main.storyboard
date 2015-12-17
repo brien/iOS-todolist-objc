@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add To-Do Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,15 +32,28 @@
                             <constraint firstItem="OzW-FT-9vM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uBP-RS-SrR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add To-Do Item" id="gey-Te-YiQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Llh-y7-OdW">
+                            <connections>
+                                <segue destination="vrd-Ku-rFh" kind="unwind" unwindAction="unwindToList:" id="mIN-qU-DgQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6ud-p0-92l">
+                            <connections>
+                                <segue destination="vrd-Ku-rFh" kind="unwind" unwindAction="unwindToList:" id="6HJ-uj-1q8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="vrd-Ku-rFh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="324"/>
+            <point key="canvasLocation" x="1849" y="324"/>
         </scene>
         <!--To-Do List-->
         <scene sceneID="R1j-D5-OKj">
             <objects>
-                <tableViewController id="XsC-V8-3ei" sceneMemberID="viewController">
+                <tableViewController id="XsC-V8-3ei" customClass="ToDoListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0xe-Og-98T">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,7 +429,7 @@
                     <navigationItem key="navigationItem" title="To-Do List" id="zET-K3-Tnq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jfT-So-8wP">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="cbN-hO-aIk"/>
+                                <segue destination="e85-8g-qXq" kind="presentation" id="cbN-hO-aIk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -442,6 +455,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRR-fA-vwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-430" y="324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UDn-AH-VqG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e85-8g-qXq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vzu-wG-GX5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yfo-Zu-tlN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkh-DG-SBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="324"/>
         </scene>
     </scenes>
 </document>
